@@ -35,7 +35,7 @@ This should compile without warnings.
 Ensure that the following tools and versions are compatible:
 - GCC, nvcc, and nvidia-smi should harmonise for successful compilation.
 - Example of compatible versions:
-  - GCC Version:
+  - GCC version:
     ```bash
     USERNAME@ray17:CUDAScripts$ gcc --version
     gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
@@ -54,7 +54,7 @@ Ensure that the following tools and versions are compatible:
     Build cuda_12.5.r12.5/compiler.34177558_0
     ```
 
-  - NVIDIA Driver and GPU Info:
+  - NVIDIA driver and GPU information:
     ```bash
     USERNAME@ray17:CUDAScripts$ nvidia-smi
     Mon Mar 31 20:35:47 2025       
