@@ -42,6 +42,7 @@ def get_gpu_info():
     cuda_version = root.findtext("cuda_version", default="n/a")
 
     field_map = {
+	"GPU UUID": (["uuid"], False),
         "Product name": (["product_name"], False), 
         "Product architecture": (["product_architecture"], True),
         "Used GPU memory (MB)": (["fb_memory_usage", "used"], True),
