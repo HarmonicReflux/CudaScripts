@@ -49,14 +49,19 @@ std::cout << "Scanning visible GPUs..." << std::endl;
         return 1;
     }
 
+    std::cout << "Number of CUDA devices: " << deviceCount << std::endl;
+
     for (int i = 0; i < deviceCount; ++i) {
         cudaDeviceProp deviceProps;
-        
+
         // get properties of the CUDA device
         cudaGetDeviceProperties(&deviceProps, i);
 
         // print GPU name
-        std::cout << "GPU " << i << ": " << deviceProps.name << std::endl;
+        std::cout << "\nGPU " << i << ": " << deviceProps.name << std::endl;
+
+	// print Memory 
+	std::cout  <<  "Memory: " << deviceProps.totalGlobalMem / (1024 * 1024) << " MB" << std::endl;
 
         // print CUDA compute capability (version)
         std::cout << "CUDA compute capability is: " 
@@ -64,7 +69,7 @@ std::cout << "Scanning visible GPUs..." << std::endl;
     }
 
     std::cout << std::endl;
-    std::cout << "Script run succesfully. Exiting now."  << std::endl;
+    std::cout << "Script run succesfully. Exiting now.\n"  << std::endl;
 
     return 0;
 }
