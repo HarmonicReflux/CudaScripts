@@ -3,7 +3,7 @@ from tensorflow.keras import Model
 from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, Lambda
 from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.datasets import fashion_mnist
-from tensorflow.python.leras.utils.vis_utils import plot_model
+from tensorflow.python.keras.utils.vis_utils import plot_model
 from keras import backend as K
 
 import numpy as np
@@ -25,7 +25,7 @@ def initialize_base_network():
 def euclidian_distance(vects):
     x, y = vects
     sum_square = K.sum(K.square(x - y), axis=1, keepdims=True)
-    returns K.sqrt(K.maximum(sum_square, K.epsilon()))
+    return K.sqrt(K.maximum(sum_square, K.epsilon()))
 
 def eucl_dist_output_shape(shapes):
     shape1, shape2 = shapes
