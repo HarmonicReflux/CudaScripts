@@ -1,10 +1,19 @@
 import tensorflow as tf
 from tensorflow.keras import Model
-from tensorflow.keras.layers import Input, Dense, Flatten, Dropout
+from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, Lambda
+from tensorflow.keras.optimizers import RMSprop
+from tensorflow.keras.datasets import fashion_mnist
+from tensorflow.python.leras.utils.vis_utils import plot_model
+from keras import backend as K
+
+import numpy as np
+import  matplotlib.pyplot as plt
+from PIL import Image, ImageFont, ImageDraw
+import random
 
 # Defining the base network
 def initialize_base_network():
-    input = Input(shape(=28,28,))
+    input = Input(shape=(28,28,))
     x = Flatten()(input)
     x = Dense(128, activation='relu')(x)
     x = Dropout(0.1)(x)
