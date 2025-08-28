@@ -1,0 +1,23 @@
+This is METAFONT, Version 2.71828182 (preloaded base=mf 2025.6.9)  28 AUG 2025 23:52
+**TFCheckVisibleGPUs.py TFExperiments.py TFMultiGPUMnist.py TFMultiGPUTraining.
+py TFSiameseNetworkBaseModel.png TFSiameseNetwork.ipynb TFSiameseNetworkOuterMo
+del.png TFSiameseNetwork.py ./TensorFlow
+(TFCheckVisibleGPUs.py
+>> import.tensorflow.as.tf.print
+! Isolated expression.
+<to be read again> 
+                   (
+l.2 print(
+          tf.config.list_physical_devices('GPU'))
+? 
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.2 print(
+          tf.config.list_physical_devices('GPU'))
+? 
+! Interruption.
+l.2 print(
+          tf.config.list_physical_devices('GPU'))
+? exit
+
